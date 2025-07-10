@@ -1,0 +1,31 @@
+# Gradle 빌드 디렉토리
+build/
+.gradle/
+
+# IDE 관련 파일
+.idea/
+.vscode/
+*.iml
+*.ipr
+*.iws
+
+# OS 관련 파일
+.DS_Store
+Thumbs.db
+
+# Git 관련 파일
+.git/
+.gitignore
+
+# 기타 불필요한 파일
+*.log
+*.tmp
+*.temp
+
+# Docker 관련 파일
+Dockerfile
+.dockerignore
+compose.yaml
+
+# 테스트 관련 파일
+.gradle-test-kit/ 

@@ -1,0 +1,31 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/Swibee
+    driver-class-name: org.postgresql.Driver
+    username: myuser
+    password: Welcome1!
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+  data:
+    mongodb:
+      uri: mongodb://root:Welcome1!@localhost:27017/Swibee?authSource=admin
+  redis:
+    host: localhost
+    port: 6379
+    timeout: 2000ms
+
+server:
+  port: 8080
+
+logging:
+  level:
+    root: INFO
+    dev.swibee: DEBUG
+    org.springframework.web: DEBUG
+    org.springframework.data.mongodb: DEBUG 

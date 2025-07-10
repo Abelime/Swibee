@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: Swibee
+  profiles:
+    active: dev
+
+server:
+  port: 8080
+
+logging:
+  level:
+    root: INFO
+    dev.swibee: DEBUG 

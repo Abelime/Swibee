@@ -1,0 +1,35 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://postgres:5432/Swibee
+    driver-class-name: org.postgresql.Driver
+    username: myuser
+    password: Welcome1!
+    hikari:
+      maximum-pool-size: 10
+      connection-timeout: 20000
+      idle-timeout: 300000
+      max-lifetime: 1200000
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+    properties:
+      hibernate:
+        format_sql: false
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+  data:
+    mongodb:
+      uri: mongodb://root:Welcome1!@mongodb:27017/Swibee?authSource=admin
+  redis:
+    host: redis
+    port: 6379
+    timeout: 2000ms
+
+server:
+  port: 8080
+
+logging:
+  level:
+    root: INFO
+    dev.swibee: INFO
+    org.springframework.web: WARN 
