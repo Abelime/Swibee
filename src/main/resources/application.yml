@@ -10,4 +10,12 @@ server:
 logging:
   level:
     root: INFO
-    dev.swibee: DEBUG 
+    dev.swibee: DEBUG
+
+# JWT 설정
+jwt:
+  secret: ${JWT_SECRET:swibee-jwt-secret-key-must-be-at-least-256-bits-long-for-hs256-algorithm}
+  access-token:
+    expiration: ${JWT_ACCESS_TOKEN_EXPIRATION:1800000} # 30분 (30 * 60 * 1000)
+  refresh-token:
+    expiration: ${JWT_REFRESH_TOKEN_EXPIRATION:1209600000} # 14일 (14 * 24 * 60 * 60 * 1000) 
